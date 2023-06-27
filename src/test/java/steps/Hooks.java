@@ -22,8 +22,6 @@ public class Hooks extends BasePage {
             final byte[] screenshot = ((TakesScreenshot) driver)
                     .getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
-
-
         }
     }
 }
