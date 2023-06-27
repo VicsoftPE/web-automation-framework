@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.webVAC</groupId>
+  <artifactId>webVAC</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>webVAC</name>
+<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<org.springframework.version>4.1.7.RELEASE</org.springframework.version>
+		
+		<selenium.version>3.5.3</selenium.version>
+		<!-- <selenium.version>3.10.0</selenium.version> -->
+
+	</properties>
+
+	<dependencies>
+
+		 <dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+ 			<version>${selenium.version}</version>
+			 <scope>test</scope>
+
+		 </dependency>
+
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.4.5</version>
+		</dependency>
+		
+		<dependency>
+   			<groupId>org.apache.poi</groupId>
+    		<artifactId>poi</artifactId>
+    		<version>3.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>7.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>7.1.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber7-adapter</artifactId>
+			<version>1.7.0</version>
+		</dependency>
+
+	</dependencies>
+
+
+  
+  
+  
+  
+</project>
