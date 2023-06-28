@@ -22,10 +22,13 @@ public class productsearchSteps {
     }
     @When("^User searches for product (.+) on (.+) category$")
     public void searchProductByCategory(String product, String itemCategory){
+        ebayPage.isMsgShipPresent();
         ebayPage.clickCategoriesSelect();
         ebayPage.selectCategoryCriteria(itemCategory);
         ebayPage.enterSearchCriteria(product);
         ebayPage.clickEbaySearch();
+
+
     }
     @Then("^Search result page shows (.+) brand of product$")
     public void showBrandOfProduct(String item){

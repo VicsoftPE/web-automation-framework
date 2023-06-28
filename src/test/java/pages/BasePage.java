@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 
 public class BasePage {
@@ -34,7 +35,10 @@ public class BasePage {
             System.setProperty("webdriver.chrome.driver", "C:\\Users\\victor.arroyo\\Documents\\Victor\\Automation\\JavaProject\\chromeDriver\\chromedriver.exe");
             ChromeOptions chromeOptions = new ChromeOptions();
             driver = new ChromeDriver(chromeOptions);
+            driver.manage().window().maximize();
             wait = new WebDriverWait(driver, 10);
+
+
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -59,8 +63,9 @@ public class BasePage {
         driver.quit();
     };
     private WebElement Find(String locator){
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+          return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
+
 
     public void clickElement(String locator){
         Find(locator).click();
@@ -133,9 +138,8 @@ public class BasePage {
     }
 
     public boolean elementIsDisplayed(String locator){
-        return Find(locator).isDisplayed();
-    }
-
+           return Find(locator).isDisplayed();
+      }
     public boolean elementIsEnabled(String locator){
         return Find(locator).isEnabled();
     }

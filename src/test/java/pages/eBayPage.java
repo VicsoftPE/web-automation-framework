@@ -22,6 +22,8 @@ public class eBayPage extends BasePage {
     private String geoDefault = "//*[@id='gh-eb-Geo-a-default']/span[2]";
     private String changeGeo = "//*[@id='gh-eb-Geo-a-en']/span[2]";
 
+    private String msgShip = "//*[@id='gh-msgOverlay']";
+    private String closeMsgShip = "//*[@id='gh-msgOverlay']/div[2]";
 
     //Constructor - Super
     public eBayPage(){
@@ -44,7 +46,6 @@ public class eBayPage extends BasePage {
                 }
             }
         }
-
     }
     public void clickEbaySearch(){
 
@@ -64,8 +65,7 @@ public class eBayPage extends BasePage {
     }
 
     public void clickCategoriesSelect(){
-
-        clickElement(categorySelect);
+           clickElement(categorySelect);
 
     }
     public void selectCategoryCriteria(String criteria){
@@ -95,5 +95,14 @@ public class eBayPage extends BasePage {
         }
         return stringsFromList;
     }
+
+    public void isMsgShipPresent() {
+        if (bringAllElements(msgShip).size()>0) {
+            clickElement(closeMsgShip);
+
+        }
+    }
+
+
 
 }

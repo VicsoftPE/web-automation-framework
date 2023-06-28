@@ -12,6 +12,6 @@ Feature: Search products in eBay page
       And The results page matches with <expectedResult> within products shown
 
       Examples:
-        | itemCategory                  | product_name     | brand  | expectedResult                                                                   |
-        | Clothing, Shoes & Accessories | Zapatilla Puma   | PUMA   | PUMA BASKET MID ALI ZAPATILLAS SNEAKERS WOMEN SHOES CREAM 364213-02 SIZE 9.5 NEW |
-        | All Categories                | Zapatilla Reebok | Reebok | REEBOK MEN'S WOMEN'S SNEAKER RUNNING ZIG KINETICA II EDGE                        |
+        | itemCategory                  | product_name     | brand  | expectedResult                                                                |
+        | Clothing, Shoes & Accessories | Zapatilla Puma   | PUMA   | PUMA Men's Viz Runner Repeat Running Sneakers                                 |
+        | All Categories                | Zapatilla Reebok | Reebok | Reebok Classic Leather Men’s Athletic Sneaker Running Shoe White Trainer #383 |
